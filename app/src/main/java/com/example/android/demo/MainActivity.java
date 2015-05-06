@@ -29,6 +29,7 @@ public class MainActivity extends ActionBarActivity {
         params = new HashMap<String, String>();
 
 
+
         String hashSequence = "asljdhaifffgfgyffsyuhfgsuyfsb";
         String hash = hashCal("SHA-512", hashSequence);
 
@@ -38,6 +39,8 @@ public class MainActivity extends ActionBarActivity {
         params.put("key","JBZaLc");
         params.put("Amount","155");
         params.put("MerchantId","5112938");
+
+
 
         params.put("ProductInfo","juta");
         params.put("SURL","http://shrijay.com/recharge/register.php");
