@@ -28,9 +28,36 @@ public class MainActivity extends ActionBarActivity {
         Button btn =  (Button)findViewById(R.id.btn);
         params = new HashMap<String, String>();
 
+        //debug
+        String hashSequence = "Vw997n" + "|" + "0nf7" + "|" + "190" + "|" + "product_name" + "|" + "piyush" + "|"
+                + "piyush.jain@payu.in" + "|" + "" + "|" + "" + "|" + "" + "|" + "" + "|" + "" + "|" + "4womTBoq";
+
+        String hash = hashCal("SHA-512", hashSequence);
+        Log.i("hash", hash);
+        //  params.put("TxnId", "0nf7" + System.currentTimeMillis());
+        params.put("TxnId", "0nf7");// debug
+        params.put("MerchantId","4825269");
+        params.put("SURL", "https://test.payumoney.com/mobileapp/payumoney/success.php");
+        params.put("FURL", "https://test.payumoney.com/mobileapp/payumoney/failure.php");
+        params.put("ProductInfo", "product_name");
+        params.put("firstName", "piyush");
+        params.put("Email", "piyush.jain@payu.in");
+        params.put("Phone", "8882434664");
+        params.put("Amount", "190");
+        params.put("hash", hash);
+        //test key
+        params.put("key", "Vw997n");
+
+        params.put("udf1", "");
+        params.put("udf2", "");
+        params.put("udf3", "");
+        params.put("udf4", "");
+        params.put("udf5", "");
 
 
-        String hashSequence = "asljdhaifffgfgyffsyuhfgsuyfsb";
+
+
+   /*     String hashSequence = "asljdhaifffgfgyffsyuhfgsuyfsb";
         String hash = hashCal("SHA-512", hashSequence);
 
         Log.e("new hash key", hash);
@@ -48,7 +75,7 @@ public class MainActivity extends ActionBarActivity {
         params.put("firstName","krishna");
         params.put("Email","pinch@a.com");
         params.put("Phone","9725633197");
-
+*/
 
 
 
